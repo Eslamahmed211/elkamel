@@ -3,6 +3,7 @@
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\profile\profileController;
 use App\Models\page;
+use App\Models\project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -46,11 +47,19 @@ Route::get('questions', function () {
 Route::get('contactus', function () {
     return view("users/contactus");
 });
+Route::get('projects', function () {
+    return view("users/projects");
+});
 
 Route::get('/pages/{slug}', function ($slug) {
 
     $page = page::where("slug", $slug)->first();
     return view("users/page", compact("page"));
+});
+Route::get('/projects/{id}', function ($id) {
+
+    $project = project::where("id", $id)->first();
+    return view("users/project_show", compact("project"));
 });
 
 

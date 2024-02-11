@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('assets/admin/css/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="https://zamzamfoods-eg.com/assets/sw/swiper-element.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -69,7 +71,7 @@
                         <a href="/services" class="text-[16px] font-[700] text-[#222]">خدماتنا</a>
                     </li>
                     <li>
-                        <a href="/html/projects.html" class="text-[16px] font-[700] text-[#222]">مشاريعنا</a>
+                        <a href="/projects" class="text-[16px] font-[700] text-[#222]">مشاريعنا</a>
                     </li>
 
                     <li>
@@ -122,7 +124,19 @@
                 <a href="/"><img src="/images/logo.svg" /></a>
             </li>
             <li class="relative">
-                <a href="/html/projects.html" class="text-[16px] font-[700] text-[#222]">مشاريعنا</a>
+
+                <a href="/projects"
+                    class="text-[16px] font-[700] @if (request()->is('about')) text-[#042E6F]
+                @else
+                text-[#222] @endif  ">
+                    مشاريعنا</a>
+
+                @if (request()->is('projects*'))
+                    <span
+                        class="w-[45px] h-[8px] bg-[#EF8B1D] rounded-[4px] absolute top-[182%] left-[50%] translate-x-[-50%]"></span>
+                @endif
+
+
             </li>
 
             <li class="relative">
@@ -216,7 +230,8 @@
 
                 <div>
                     @foreach (App\Models\page::where('show', '1')->get() as $page)
-                        <a style="margin-left: 10px" target="_blank" href="/pages/{{ $page->slug }}">{{ $page->title }}</a>
+                        <a style="margin-left: 10px" target="_blank"
+                            href="/pages/{{ $page->slug }}">{{ $page->title }}</a>
                     @endforeach
                 </div>
 
