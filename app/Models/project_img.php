@@ -9,7 +9,7 @@ class project_img extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["img"];
+    protected $fillable = ["img" , "project_id" , "order"];
 
     public function project(){
         return $this->belongsTo(project::class);

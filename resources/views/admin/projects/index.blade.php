@@ -53,7 +53,7 @@
 
                         <tbody>
 
-                                @foreach ($projects as $project)
+                            @foreach ($projects as $project)
                                 <tr>
 
                                     <td>{{ $project->title }}</td>
@@ -62,6 +62,9 @@
                                         <div>
                                             <div onclick='window.location.href = "/admin/projects/{{ $project->id }}/edit"'
                                                 data-tippy-content="تعديل" class="square-btn ltr has-tip"><i
+                                                    class="far fa-edit mr-2 icon" aria-hidden="true"></i></div>
+                                            <div onclick='window.location.href = "/admin/projects/{{ $project->id }}/imgs"'
+                                                data-tippy-content="معرض الصور" class="square-btn ltr has-tip"><i
                                                     class="far fa-edit mr-2 icon" aria-hidden="true"></i></div>
 
                                             <div type="button" data-id="{{ $project->id }}"

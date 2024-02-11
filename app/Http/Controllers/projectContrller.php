@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\lib\img;
+use App\Models\project_img;
+use Illuminate\Support\Facades\Redirect;
 
 class projectContrller extends Controller
 {
@@ -73,6 +76,10 @@ class projectContrller extends Controller
     {
         return view("admin/projects/edit", compact("project"));
     }
+    function img(project $project)
+    {
+        return view("admin/projects/imgs", compact("project"));
+    }
     public function update(Request $request, project $project)
     {
         $data = $request->validate([
@@ -93,5 +100,71 @@ class projectContrller extends Controller
         $project->update($data);
 
         return redirect()->back()->with('success', 'تم التعديل بنجاح');
+    }
+
+    function storeImgs(Request $request, project $project)
+    {
+
+        $data = $request->validate([
+            "imgs" => "required"
+        ], [
+            "imgs.required" => "يرجي اضافة صور"
+        ]);
+
+
+
+        // try {
+
+        if (isset($data["imgs"])) {
+            $Uploads = [];
+
+            foreach ($data["imgs"] as $img) {
+                $data['img'] = img::upload('project', $img, 800);
+                array_push($Uploads, $data['img']);
+            }
+
+
+            foreach ($Uploads as $Upload) {
+                project_img::create([
+                    "project_id" => $project->id,
+                    "img" => $Upload,
+                ]);
+            }
+        }
+        // } catch (\Throwable $th) {
+        //     return Redirect::back()->with("error", "خطأ في اضافة صور المنتج")->withInput();;
+        // }
+
+        return Redirect::back()->with("success", "تم الاضافة بنجاح");
+    }
+
+    function destroyImgs(Request $request)
+    {
+
+
+            $img = project_img::find($request->img_id);
+
+
+            $old_path = $img->img;
+
+            $img->delete();
+
+            Storage::delete($old_path);
+
+
+            return Redirect::back()->with("success", "تم الازالة بنجاح");
+
+    }
+
+    public function changeOrder(Request $request)
+    {
+
+
+
+        project_img::where('id', $request->id)->update([
+            'order' => $request->order + 1
+        ]);
+
+        return true;
     }
 }

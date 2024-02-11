@@ -12,6 +12,6 @@ class project extends Model
     protected $fillable = ["title" , "start_at" , "end_at" , "short_dis" , "long_dis" , "percent" , "img" ];
 
     public function imgs(){
-        return $this->hasMany(project_img::class);
+        return $this->hasMany(project_img::class)->orderBy("order", "Asc");
     }
 }

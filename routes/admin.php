@@ -119,7 +119,13 @@ Route::prefix("projects")->middleware('checkRole:projects')->group(function () {
     Route::get('/', [projectContrller::class, 'index']);
     Route::put('header', [projectContrller::class, 'update_project_header']);
     Route::post('/', [projectContrller::class, 'store_projects']);
+    Route::post('{project}/storeImgs', [projectContrller::class, 'storeImgs']);
     Route::delete('destroy', [projectContrller::class, 'destroy']);
     Route::get('{project}/edit', [projectContrller::class, 'edit']);
+    Route::get('{project}/imgs', [projectContrller::class, 'img']);
     Route::put('{project}', [projectContrller::class, 'update']);
+
+
+    Route::get('product_images/changeOrder', [projectContrller::class, 'changeOrder']);
+    Route::DELETE('project_images/destroy', [projectContrller::class, 'destroyImgs']);
 });
