@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elkamel</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Public Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Public Sans";
+        direction: rtl;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- start navbar  -->
+    <div class="bg-[#EF8B1D] pb-1">
+      <div class="relative lg:hidden">
+        <div class="flex justify-between items-center px-5">
+          <img src="../images/logo.svg" alt="image" class="-mr-8" />
+          <img
+            id="menu"
+            src="../images/hamburger.png"
+            alt="image"
+            class="w-8 cursor-pointer"
+          />
+        </div>
+        <div id="links" class="absolute bg-[#EF8B1D] z-20 py-5 hidden">
+          <ul class="flex flex-wrap gap-10 lg:hidden justify-center px-5">
+            <li class="relative">
+              <a href="/index.html" class="text-[20px] font-[700] text-[#222]"
+                >الرئيسية</a
+              >
+            </li>
+            <li>
+              <a
+                href="./aboutus.html"
+                class="text-[20px] font-[700] text-[#042E6F]"
+                >عن الكامل</a
+              >
+            </li>
+            <li>
+              <a
+                href="./services.html"
+                class="text-[20px] font-[700] text-[#222]"
+                >خدماتنا</a
+              >
+            </li>
+            <li>
+              <a
+                href="./projects.html"
+                class="text-[20px] font-[700] text-[#222]"
+                >مشاريعنا</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[20px] font-[700] text-[#222]"
+                >المركز الاعلامي</a
+              >
+            </li>
+            <li>
+              <a
+                href="./questions.html"
+                class="text-[20px] font-[700] text-[#222]"
+                >أسئلة شائعة</a
+              >
+            </li>
+            <li>
+              <a
+                href="./contactus.html"
+                class="text-[20px] font-[700] text-[#222]"
+                >تواصل معنا</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul
+        class="hidden bg-white lg:flex justify-between items-center px-20 rounded-t-[5px] rounded-b-[200px]"
+      >
+        <li>
+          <a href="/index.html" class="text-[20px] font-[700] text-[#222]"
+            >الرئيسية</a
+          >
+        </li>
+        <li class="relative">
+          <a href="./aboutus.html" class="text-[20px] font-[700] text-[#042E6F]"
+            >عن الكامل</a
+          >
+          <span
+            class="w-[45px] h-[8px] bg-[#EF8B1D] rounded-[4px] absolute top-[182%] left-[50%] translate-x-[-50%]"
+          ></span>
+        </li>
+        <li>
+          <a href="./services.html" class="text-[20px] font-[700] text-[#222]"
+            >خدماتنا</a
+          >
+        </li>
+        <li>
+          <a href="/index.html"><img src="/images/logo.svg" /></a>
+        </li>
+        <li>
+          <a href="./projects.html" class="text-[20px] font-[700] text-[#222]"
+            >مشاريعنا</a
+          >
+        </li>
+        <li>
+          <a href="#" class="text-[20px] font-[700] text-[#222]"
+            >المركز الاعلامي</a
+          >
+        </li>
+        <li>
+          <a href="./questions.html" class="text-[20px] font-[700] text-[#222]"
+            >أسئلة شائعة</a
+          >
+        </li>
+        <li>
+          <a href="./contactus.html" class="text-[20px] font-[700] text-[#222]"
+            >تواصل معنا</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- end navbar -->
+
+    <!-- start landing -->
+    <div class="bg-[url(../images/headerBackgrond.png)] bg-no-repeat bg-cover">
+      <div
+        class="bg-primaryColor relative grid place-content-center place-items-center"
+      >
+        <div
+          class="p-5 container flex flex-col gap-10 lg:flex-row justify-between items-center pb-[6rem]"
+        >
+          <img
+            src="../images/shapes.svg"
+            alt="img"
+            class="absolute top-0 left-0"
+          />
+
+          <div class="basis-[40%]">
+            <img src="../images/aboutLanding.svg" alt="image" class="  " />
+          </div>
+          <div class="basis-[60%]">
+            <p class="text-[24px] font-[700] text-[#042E6F] mb-5">عن الكامل</p>
+
+            <p class="text-[20px] font-[400] text-[#fff] max-w-[558px]">
+              لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
+              دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+              يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو
+              لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات؟ لوريم ايبسوم
+              دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود
+              تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد
+              مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو لابورأس نيسي يت
+              أليكيوب أكس أيا كوممودو كونسيكيوات؟
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end landing -->
+
+    <!-- start about office -->
+    <div
+      class="p-5 container flex flex-col lg:flex-row justify-center items-center gap-[15%] gap-y-10 my-10"
+    >
+      <div>
+        <p class="text-[#042E6F] text-[32px] lg:text-[48px] font-[700]">
+          عن المكتب
+        </p>
+        <p
+          class="text-[#141414] text-[32px] font-[400] max-w-[450px] leading-[50px] lg:leading-[65px]"
+        >
+          يوفر التعليم الإلكتروني أفضل الفرص للطلاب في جميع أنحاء العالم.
+        </p>
+        <p
+          class="text-[#000000] text-[18px] lg:text-[24px] font-[400] max-w-[450px] mt-2"
+        >
+          لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو
+          أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت
+          انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو لابورأس نيسي
+          يت أليكيوب أكس أيا كوممودو كونسيكيوات؟
+        </p>
+        <p
+          class="text-[#000000] text-[18px] lg:text-[24px] font-[400] max-w-[450px]"
+        >
+          لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو
+          أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت
+          انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو لابورأس نيسي
+          يت أليكيوب أكس أيا كوممودو كونسيكيوات؟
+        </p>
+        <div
+          class="bg-[#042E6F] flex items-center gap-4 rounded-full p-5 w-fit mt-5 px-7 cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M9.41683 16.0748C9.26405 15.922 9.18405 15.7276 9.17683 15.4915C9.16961 15.2553 9.24267 15.0609 9.396 14.9081L13.4793 10.8248H4.16683C3.93072 10.8248 3.73267 10.7448 3.57267 10.5848C3.41267 10.4248 3.33294 10.227 3.3335 9.99145C3.3335 9.75534 3.4135 9.55729 3.5735 9.39729C3.7335 9.23729 3.93128 9.15757 4.16683 9.15812H13.4793L9.396 5.07479C9.24322 4.92201 9.17017 4.72757 9.17683 4.49145C9.1835 4.25534 9.2635 4.0609 9.41683 3.90812C9.56961 3.75534 9.76405 3.67896 10.0002 3.67896C10.2363 3.67896 10.4307 3.75534 10.5835 3.90812L16.0835 9.40812C16.1668 9.47757 16.226 9.56451 16.261 9.66895C16.296 9.7734 16.3132 9.8809 16.3127 9.99145C16.3127 10.1026 16.2954 10.2067 16.261 10.304C16.2266 10.4012 16.1674 10.4915 16.0835 10.5748L10.5835 16.0748C10.4307 16.2276 10.2363 16.304 10.0002 16.304C9.76405 16.304 9.56961 16.2276 9.41683 16.0748Z"
+              fill="white"
+            />
+          </svg>
+          <p class="text-[16px] text-[white] font-[700]">انضم الينا</p>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="../images/aboutOffice.svg" alt="image" />
+        <img
+          src="../images/blueCircle.svg"
+          alt="img"
+          class="absolute -bottom-20 -right-16 z-[-1]"
+        />
+      </div>
+    </div>
+    <!-- end about office -->
+
+    <!-- start goals -->
+    <div
+      class="bg-[url(../images/wave_background.svg)] bg-no-repeat bg-cover my-10 pt-10 relative"
+    >
+      <img
+        src="../images/silverCircle.svg"
+        alt="image"
+        class="absolute top-[100%] right-20 z-[-1]"
+      />
+      <div class="p-5 container">
+        <div class="flex flex-col justify-center items-center gap-5">
+          <p class="text-[32px] md:text-[48px] text-[#000] font-[700]">
+            مهمتنا و اهدافنا
+          </p>
+          <img src="../images/curveLine.svg" alt="image" />
+        </div>
+        <p
+          class="text-[#222222] text-[16px] md:text-[24px] font-[400] max-w-[1000px] text-center mx-auto mt-5"
+        >
+          لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو
+          أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت
+          انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو لابورأس نيسي
+          يت أليكيوبلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج
+          أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا
+          أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو
+          لابورأس نيسي يت أليكيوب
+        </p>
+        <div class="flex gap-4">
+          <button class="prev" onclick="increaseScrollbar()">&#10094;</button>
+          <div
+            class="flex items-center my-10 gap-5 overflow-hidden scrollbar relative"
+          >
+            <div
+              class="bg-white rounded-lg p-8 hover:bg-[#EF8B1D] transition-all duration-100 group min-w-[300px]"
+            >
+              <div class="flex gap-5 items-center">
+                <img src="../images/statistcs.svg" alt="image" />
+                <p
+                  class="text-[20px] md:text-[24px] font-[700] text-[#000] group-hover:text-white"
+                >
+                  لوريم ايبسوم دولار
+                </p>
+              </div>
+              <p
+                class="font-[500] text-[#717171] group-hover:text-white text-[16px] my-5 max-w-[290px]"
+              >
+                لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج
+                أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار
+                ماجنا أليكيوا . يوت انيم أد
+              </p>
+              <div class="flex gap-5 items-center cursor-pointer">
+                <img src="../images/smallArrowRight.svg" alt="image" />
+                <p
+                  class="text-[18px] font-[500] text-[#000] group-hover:text-white"
+                >
+                  شاهد المزيد
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg p-8 hover:bg-[#EF8B1D] transition-all duration-100 group min-w-[300px]"
+            >
+              <div class="flex gap-5 items-center">
+                <img src="../images/computerGoals.svg" alt="image" />
+                <p
+                  class="text-[20px] md:text-[24px] font-[700] text-[#000] group-hover:text-white"
+                >
+                  لوريم ايبسوم دولار
+                </p>
+              </div>
+              <p
+                class="font-[500] text-[#717171] group-hover:text-white text-[16px] my-5 max-w-[290px]"
+              >
+                لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج
+                أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار
+                ماجنا أليكيوا . يوت انيم أد
+              </p>
+              <div class="flex gap-5 items-center cursor-pointer">
+                <img src="../images/smallArrowRight.svg" alt="image" />
+                <p
+                  class="text-[18px] font-[500] text-[#000] group-hover:text-white"
+                >
+                  شاهد المزيد
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg p-8 hover:bg-[#EF8B1D] transition-all duration-100 group min-w-[300px]"
+            >
+              <div class="flex gap-5 items-center">
+                <img src="../images/computer.svg" alt="image" />
+                <p
+                  class="text-[20px] md:text-[24px] text-[#000] group-hover:text-white"
+                >
+                  لوريم ايبسوم دولار
+                </p>
+              </div>
+              <p
+                class="font-[500] text-[#717171] group-hover:text-white text-[16px] my-5 max-w-[290px]"
+              >
+                لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج
+                أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار
+                ماجنا أليكيوا . يوت انيم أد
+              </p>
+              <div class="flex gap-5 items-center cursor-pointer">
+                <img src="../images/smallArrowRight.svg" alt="image" />
+                <p
+                  class="text-[18px] font-[500] text-[#000] group-hover:text-white"
+                >
+                  شاهد المزيد
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg p-8 hover:bg-[#EF8B1D] transition-all duration-100 group min-w-[300px]"
+            >
+              <div class="flex gap-5 items-center">
+                <img src="../images/computer.svg" alt="image" />
+                <p
+                  class="text-[20px] md:text-[24px] text-[#000] group-hover:text-white"
+                >
+                  لوريم ايبسوم دولار
+                </p>
+              </div>
+              <p
+                class="font-[500] text-[#717171] group-hover:text-white text-[16px] my-5 max-w-[290px]"
+              >
+                لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج
+                أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار
+                ماجنا أليكيوا . يوت انيم أد
+              </p>
+              <div class="flex gap-5 items-center cursor-pointer">
+                <img src="../images/smallArrowRight.svg" alt="image" />
+                <p
+                  class="text-[18px] font-[500] text-[#000] group-hover:text-white"
+                >
+                  شاهد المزيد
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg p-8 hover:bg-[#EF8B1D] transition-all duration-100 group min-w-[300px]"
+            >
+              <div class="flex gap-5 items-center">
+                <img src="../images/computer.svg" alt="image" />
+                <p
+                  class="text-[20px] md:text-[24px] text-[#000] group-hover:text-white"
+                >
+                  لوريم ايبسوم دولار
+                </p>
+              </div>
+              <p
+                class="font-[500] text-[#717171] group-hover:text-white text-[16px] my-5 max-w-[290px]"
+              >
+                لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج
+                أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار
+                ماجنا أليكيوا . يوت انيم أد
+              </p>
+              <div class="flex gap-5 items-center cursor-pointer">
+                <img src="../images/smallArrowRight.svg" alt="image" />
+                <p
+                  class="text-[18px] font-[500] text-[#000] group-hover:text-white"
+                >
+                  شاهد المزيد
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg p-8 hover:bg-[#EF8B1D] transition-all duration-100 group min-w-[300px]"
+            >
+              <div class="flex gap-5 items-center">
+                <img src="../images/computer.svg" alt="image" />
+                <p
+                  class="text-[20px] md:text-[24px] text-[#000] group-hover:text-white"
+                >
+                  لوريم ايبسوم دولار
+                </p>
+              </div>
+              <p
+                class="font-[500] text-[#717171] group-hover:text-white text-[16px] my-5 max-w-[290px]"
+              >
+                لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج
+                أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار
+                ماجنا أليكيوا . يوت انيم أد
+              </p>
+              <div class="flex gap-5 items-center cursor-pointer">
+                <img src="../images/smallArrowRight.svg" alt="image" />
+                <p
+                  class="text-[18px] font-[500] text-[#000] group-hover:text-white"
+                >
+                  شاهد المزيد
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg p-8 hover:bg-[#EF8B1D] transition-all duration-100 group min-w-[300px]"
+            >
+              <div class="flex gap-5 items-center">
+                <img src="../images/computer.svg" alt="image" />
+                <p
+                  class="text-[20px] md:text-[24px] text-[#000] group-hover:text-white"
+                >
+                  لوريم ايبسوم دولار
+                </p>
+              </div>
+              <p
+                class="font-[500] text-[#717171] group-hover:text-white text-[16px] my-5 max-w-[290px]"
+              >
+                لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج
+                أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار
+                ماجنا أليكيوا . يوت انيم أد
+              </p>
+              <div class="flex gap-5 items-center cursor-pointer">
+                <img src="../images/smallArrowRight.svg" alt="image" />
+                <p
+                  class="text-[18px] font-[500] text-[#000] group-hover:text-white"
+                >
+                  شاهد المزيد
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="next" onclick="decreaseScrollbar()">&#10095;</button>
+        </div>
+
+        <button
+          class="bg-[#042E6F] flex items-center gap-4 rounded-full py-3 px-10 w-fit mt-5 mx-auto text-[16px] text-[white] font-[700]"
+        >
+          اشترك الان مجانا
+        </button>
+      </div>
+    </div>
+    <!-- end goals  -->
+
+    <!-- start what is say  -->
+    <div
+      class="p-5 container flex flex-col lg:flex-row gap-5 items-center justify-between my-10 mb-[13rem]"
+    >
+      <div>
+        <p class="text-[32px] lg:text-[52px] text-[#042E6F] font-[700]">
+          ماذا يقولون؟
+        </p>
+        <p
+          class="text-[18px] lg:text-[24px] text-[black] font-[500] max-w-[530px]"
+        >
+          لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو
+          أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت
+          انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو لابورأس نيسي
+          يت أليكيوب أكس أيا كوممودو كونسيكيوات؟
+        </p>
+        <p class="text-[16px] lg:text-[22px] text-[#696984] font-[400] mt-5">
+          هل أنت أيضا؟ يرجى إعطاء تقييمك
+        </p>
+        <div
+          class="bg-[#042E6F] flex items-center gap-4 rounded-full p-5 w-fit mt-5 px-7 cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M9.41683 16.0748C9.26405 15.922 9.18405 15.7276 9.17683 15.4915C9.16961 15.2553 9.24267 15.0609 9.396 14.9081L13.4793 10.8248H4.16683C3.93072 10.8248 3.73267 10.7448 3.57267 10.5848C3.41267 10.4248 3.33294 10.227 3.3335 9.99145C3.3335 9.75534 3.4135 9.55729 3.5735 9.39729C3.7335 9.23729 3.93128 9.15757 4.16683 9.15812H13.4793L9.396 5.07479C9.24322 4.92201 9.17017 4.72757 9.17683 4.49145C9.1835 4.25534 9.2635 4.0609 9.41683 3.90812C9.56961 3.75534 9.76405 3.67896 10.0002 3.67896C10.2363 3.67896 10.4307 3.75534 10.5835 3.90812L16.0835 9.40812C16.1668 9.47757 16.226 9.56451 16.261 9.66895C16.296 9.7734 16.3132 9.8809 16.3127 9.99145C16.3127 10.1026 16.2954 10.2067 16.261 10.304C16.2266 10.4012 16.1674 10.4915 16.0835 10.5748L10.5835 16.0748C10.4307 16.2276 10.2363 16.304 10.0002 16.304C9.76405 16.304 9.56961 16.2276 9.41683 16.0748Z"
+              fill="white"
+            />
+          </svg>
+          <p class="text-[16px] text-[white] font-[700]">اكتب تقييمك</p>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="../images/whatSay.svg" alt="image" class="rounded-xl" />
+        <img
+          src="../images/rightArrow.svg"
+          alt="image"
+          class="absolute top-[50%] translate-y-[-50%] right-[-4rem] md:-right-[6.3rem] cursor-pointer"
+          onclick="moveSlide(1)"
+        />
+        <img
+          src="../images/blueCircle.svg"
+          alt="image"
+          class="absolute top-[100%] left-0"
+        />
+        <div class="slider">
+          <div class="slides">
+            <div
+              class="p-5 rounded-xl bg-white border-l-[.6rem] border-[#EF8B1D] shadow-xl absolute top-[70%] right-0 md:-right-[7rem] lg:-right-[10rem] slidee"
+            >
+              <p
+                class="text-[16px] lg:text-[20px] text-[#5F5F7E] font-[400] p-4 border-l border-[#BDBDD1] max-w-[400px] leading-[25px]"
+              >
+                "شكرا جزيلا لمساعدتكم. هذا بالضبط ما كنت أبحث عنه. لن تندم على
+                ذلك. إنه حقا يوفر لي الوقت والجهد. سكيلين هو بالضبط ما تفتقر
+                إليه أعمالنا ".
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <div>
+                  <img src="../images/starts.svg" alt="image" />
+                  <p class="text-[15px] text-[#80819A] font-[600] mt-2">
+                    12 تعليقات في Yelp
+                  </p>
+                </div>
+                <p class="text-[#5F5F7E] text-[16px] lg:text-[20px] font-[600]">
+                  Gloria Rose
+                </p>
+              </div>
+            </div>
+            <div
+              class="p-5 rounded-xl bg-white border-l-[.6rem] border-[#EF8B1D] shadow-xl absolute top-[70%] right-0 md:-right-[7rem] lg:-right-[10rem] slidee hidden"
+            >
+              <p
+                class="text-[16px] lg:text-[20px] text-[#5F5F7E] font-[400] p-4 border-l border-[#BDBDD1] max-w-[400px] leading-[25px]"
+              >
+                "شكرا جزيلا لمساعدتكم. هذا بالضبط ما كنت أبحث عنه. لن تندم على
+                ذلك. إنه حقا يوفر لي الوقت والجهد. سكيلين هو بالضبط ما تفتقر
+                إليه أعمالنا ".
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <div>
+                  <img src="../images/starts.svg" alt="image" />
+                  <p class="text-[15px] text-[#80819A] font-[600] mt-2">
+                    12 تعليقات في Yelp
+                  </p>
+                </div>
+                <p class="text-[#5F5F7E] text-[16px] lg:text-[20px] font-[600]">
+                  Gloria Rose2
+                </p>
+              </div>
+            </div>
+            <div
+              class="p-5 rounded-xl bg-white border-l-[.6rem] border-[#EF8B1D] shadow-xl absolute top-[70%] right-0 md:-right-[7rem] lg:-right-[10rem] slidee hidden"
+            >
+              <p
+                class="text-[16px] lg:text-[20px] text-[#5F5F7E] font-[400] p-4 border-l border-[#BDBDD1] max-w-[400px] leading-[25px]"
+              >
+                "شكرا جزيلا لمساعدتكم. هذا بالضبط ما كنت أبحث عنه. لن تندم على
+                ذلك. إنه حقا يوفر لي الوقت والجهد. سكيلين هو بالضبط ما تفتقر
+                إليه أعمالنا ".
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <div>
+                  <img src="../images/starts.svg" alt="image" />
+                  <p class="text-[15px] text-[#80819A] font-[600] mt-2">
+                    12 تعليقات في Yelp
+                  </p>
+                </div>
+                <p class="text-[#5F5F7E] text-[16px] lg:text-[20px] font-[600]">
+                  Gloria Rose 3
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end what is say  -->
+
+    <!-- start penefits -->
+    <div>
+      <div>
+        <p class="text-[32px] md:text-[48px] text-[#042E6F] font-[700] mt-10 text-center">
+          ما الذي يميزنا
+        </p>
+
+        <div class="w-fit mx-auto my-5 p-5">
+          <p
+            class="text-[20px] lg:text-[48px] text-[#000] font-[500] max-w-[600px] text-center mx-auto leading-[3.5rem]"
+          >
+            من خلال الانضمام إلى منصة التعليم الإلكتروني ، يمكن للمرء الاستفادة
+            من الكثير من الفوائد.
+          </p>
+          <p
+            class="text-[16px] text-[#000] font-[500] max-w-[500px] text-center mx-auto mt-4"
+          >
+            لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو
+            أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت
+            انيم أد
+          </p>
+        </div>
+        <div
+          class="p-5 container my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-5 place-content-center place-items-center relative"
+        >
+          <!-- <img
+                src="../images/blueCircle.svg"
+                alt="image"
+                class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[-1]"
+              /> -->
+          <div class="bg-[#FDF3E8] rounded-lg p-5 flex flex-col gap-3">
+            <p
+              class="text-[34px] text-[#042E6F] font-[500] bg-[url(../images/shape1.svg)] bg-no-repeat w-fit"
+            >
+              01
+            </p>
+            <p class="text-[24px] text-[#141414] font-[500]">توحيد</p>
+            <p class="text-[16px] text-[#000] font-[500]">
+              لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
+              دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+              يوت انيم أد
+            </p>
+          </div>
+          <div
+            class="border border-[#F2F2F2] rounded-lg p-5 flex flex-col gap-3"
+          >
+            <p
+              class="text-[34px] text-[#042E6F] font-[500] bg-[url(../images/shape2.svg)] bg-no-repeat w-fit"
+            >
+              02
+            </p>
+            <p class="text-[24px] text-[#141414] font-[500]">تكاليف مخفضة</p>
+            <p class="text-[16px] text-[#000] font-[500]">
+              لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
+              دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+              يوت انيم أد
+            </p>
+          </div>
+          <div class="bg-[#FDF3E8] rounded-lg p-5 flex flex-col gap-3">
+            <p
+              class="text-[34px] text-[#042E6F] font-[500] bg-[url(../images/shape1.svg)] bg-no-repeat w-fit"
+            >
+              03
+            </p>
+            <p class="text-[24px] text-[#141414] font-[500]">
+              المزيد من التخصيص
+            </p>
+            <p class="text-[16px] text-[#000] font-[500]">
+              لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
+              دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+              يوت انيم أد
+            </p>
+          </div>
+          <div
+            class="border border-[#F2F2F2] rounded-lg p-5 flex flex-col gap-3"
+          >
+            <p
+              class="text-[34px] text-[#042E6F] font-[500] bg-[url(../images/shape2.svg)] bg-no-repeat w-fit"
+            >
+              04
+            </p>
+            <p class="text-[24px] text-[#141414] font-[500]">أسعار معقولة</p>
+            <p class="text-[16px] text-[#000] font-[500]">
+              لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
+              دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+              يوت انيم أد
+            </p>
+          </div>
+          <div class="bg-[#FDF3E8] rounded-lg p-5 flex flex-col gap-3">
+            <p
+              class="text-[34px] text-[#042E6F] font-[500] bg-[url(../images/shape1.svg)] bg-no-repeat w-fit"
+            >
+              05
+            </p>
+            <p class="text-[24px] text-[#141414] font-[500]">رضا المتعلم</p>
+            <p class="text-[16px] text-[#000] font-[500]">
+              لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
+              دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+              يوت انيم أد
+            </p>
+          </div>
+          <div
+            class="border border-[#F2F2F2] rounded-lg p-5 flex flex-col gap-3"
+          >
+            <p
+              class="text-[34px] text-[#042E6F] font-[500] bg-[url(../images/shape2.svg)] bg-no-repeat w-fit"
+            >
+              06
+            </p>
+            <p class="text-[24px] text-[#141414] font-[500]">
+              مواد الوسائط المتعددة
+            </p>
+            <p class="text-[16px] text-[#000] font-[500]">
+              لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
+              دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+              يوت انيم أد
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end penifits  -->
+
+    <!-- start footer  -->
+    <div class="my-24 relative">
+      <img
+        src="../images/bgFooter.svg"
+        alt="img"
+        class="bg-cover bg-no-repeat w-full absolute top-0 left-0 z-[-1]"
+      />
+      <div class="p-5 container">
+        <div
+          class="bg-white p-10 rounded-[10px] flex flex-col lg:flex-row gap-5 justify-center items-center mt-[3.5rem] shadow-2xl"
+        >
+          <div
+            class="border-[2px] border-gray-400 py-1 px-2 flex items-center gap-3 md:min-w-[512px]"
+          >
+            <div
+              class="max-w-[80px] md:max-w-[180px] bg-[#042E6F] rounded-[4px] flex justify-center text-white px-10 py-3 cursor-pointer"
+            >
+              <p class="whitespace-nowrap text-center">اشترك الأن</p>
+            </div>
+            <input
+              type="text"
+              placeholder="ادخل البريد الالكتروني"
+              class="outline-none border-none flex-grow"
+            />
+          </div>
+          <p class="text-[20px] lg:text-[32px] font-[400] text-[#0A142F]">
+            ابدء في التواصل معنا من هنا
+          </p>
+        </div>
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center border-b py-10"
+        >
+          <div>
+            <img src="../images/social.svg" alt="image" />
+          </div>
+          <div class="flex flex-wrap gap-5 md:gap-10 lg:gap-20 items-center">
+            <p class="text-[16px] text-[#0A142F] font-[400]">تواصل معنا</p>
+            <p class="text-[16px] text-[#0A142F] font-[400]">مشاريعنا</p>
+            <p class="text-[16px] text-[#0A142F] font-[400]">خدماتنا</p>
+            <p class="text-[16px] text-[#0A142F] font-[400]">عن المكتب</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center mt-5"
+        >
+          <p>شروط الخدمة سياسة الخصوصية</p>
+          <img src="../images/logo.svg" alt="image" />
+          <p>© 2019 Lift Media. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    <!-- end footer  -->
+  </body>
+</html>

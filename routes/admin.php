@@ -2,12 +2,15 @@
 
 use App\Http\Controllers\aboutController;
 use App\Http\Controllers\admin\homeController;
+use App\Http\Controllers\admin\pages\pageContoller;
 use App\Http\Controllers\admin\rolesController;
 use App\Http\Controllers\admin\serviceContrller;
 use App\Http\Controllers\admin\users\userController;
+use App\Http\Controllers\admin\workController;
 use App\Http\Controllers\faqsController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\missionController;
+use App\Http\Controllers\SayController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -90,4 +93,20 @@ Route::middleware('checkRole:about')->prefix("features")->group(function () {
     Route::post('/', [FeatureController::class, 'store']);
     Route::delete('destroy', [FeatureController::class, 'destroy']);
     Route::put('update', [FeatureController::class, 'update']);
+});
+
+
+Route::middleware('checkRole:social')->prefix("social")->group(function () {
+    Route::get('/', [workController::class, 'social']);
+    Route::put('/', [workController::class, 'social_update']);
+});
+
+
+Route::prefix("pages")->middleware('checkRole:pages')->group(function () {
+    Route::get('/', [pageContoller::class, 'index']);
+    Route::get('create', [pageContoller::class, 'create']);
+    Route::post('/', [pageContoller::class, 'store']);
+    Route::DELETE('destroy', [pageContoller::class, 'destroy']);
+    Route::get('{page}/edit', [pageContoller::class, 'edit']);
+    Route::put('{page}', [pageContoller::class, 'update']);
 });

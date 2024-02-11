@@ -22,72 +22,71 @@ class DatabaseSeeder extends Seeder
         // ]);
 
 
-        // $columns = [
-        //     // header
-        //     [
-        //         "key" => "header_img",
-        //         "value" => ""
-        //     ],
-        //     [
-        //         "key" => "header_title",
-        //         "value" => ""
-        //     ],
-        //     [
-        //         "key" => "header_dis",
-        //         "value" => ""
-        //     ],
-        //     // about
-        //     [
-        //         "key" => "about_dis",
-        //         "value" => ""
-        //     ],
-        //     [
-        //         "key" => "our_services_dis",
-        //         "value" => ""
-        //     ],
-        //     // sp
-        //     [
-        //         "key" => "sp_img",
-        //         "value" => ""
-        //     ],
-        //     [
-        //         "key" => "sp",
-        //         "value" => ""
-        //     ],
-        //     // saying
-        //     [
-        //         "key" => "saying_img",
-        //         "value" => ""
-        //     ],
-        //     [
-        //         "key" => "saying_dis",
-        //         "value" => ""
-        //     ],
-        //     // call_us
-        //     [
-        //         "key" => "call_dis",
-        //         "value" => ""
-        //     ],
-        //     [
-        //         "key" => "call_adress",
-        //         "value" => ""
-        //     ],
-        //     [
-        //         "key" => "call_title",
-        //         "value" => ""
-        //     ],
-        //     [
-        //         "key" => "call_email",
-        //         "value" => ""
-        //     ],
-        //     [
-        //         "key" => "call_phone",
-        //         "value" => ""
-        //     ],
+    //     $columns = [
+    //         // header
+    //         [
+    //             "key" => "header_img",
+    //             "value" => ""
+    //         ],
+    //         [
+    //             "key" => "header_title",
+    //             "value" => ""
+    //         ],
+    //         [
+    //             "key" => "header_dis",
+    //             "value" => ""
+    //         ],
+    //         // about
+    //         [
+    //             "key" => "about_dis",
+    //             "value" => ""
+    //         ],
+    //         [
+    //             "key" => "our_services_dis",
+    //             "value" => ""
+    //         ],
+    //         // sp
+    //         [
+    //             "key" => "sp_img",
+    //             "value" => ""
+    //         ],
+    //         [
+    //             "key" => "sp",
+    //             "value" => ""
+    //         ],
+    //         // saying
+    //         [
+    //             "key" => "saying_img",
+    //             "value" => ""
+    //         ],
+    //         [
+    //             "key" => "saying_dis",
+    //             "value" => ""
+    //         ],
+    //         // call_us
+    //         [
+    //             "key" => "call_dis",
+    //             "value" => ""
+    //         ],
+    //         [
+    //             "key" => "call_adress",
+    //             "value" => ""
+    //         ],
+    //         [
+    //             "key" => "call_title",
+    //             "value" => ""
+    //         ],
+    //         [
+    //             "key" => "call_email",
+    //             "value" => ""
+    //         ],
+    //         [
+    //             "key" => "call_phone",
+    //             "value" => ""
+    //         ],
 
-        // ];
-        // DB::table('homes')->insert($columns);
-
+    //     ];
+    //     DB::table('homes')->insert($columns);
 
         // $columns = [
         //     [
@@ -98,10 +97,6 @@ class DatabaseSeeder extends Seeder
         //         "key" => "header_services_dis",
         //         "value" => ""
         //     ],
-        // ];
-
-
-        // $columns = [
         //     [
         //         "key" => "header_about_img",
         //         "value" => ""
@@ -110,8 +105,6 @@ class DatabaseSeeder extends Seeder
         //         "key" => "header_about_dis",
         //         "value" => ""
         //     ],
-        // ];
-        // $columns = [
         //     [
         //         "key" => "sec2_about_img",
         //         "value" => ""
@@ -120,22 +113,37 @@ class DatabaseSeeder extends Seeder
         //         "key" => "sec2_about_dis",
         //         "value" => ""
         //     ],
-        // ];
 
-        // $columns = [
         //     [
         //         "key" => "mission_dis",
         //         "value" => ""
         //     ],
+
+        //     [
+        //         "key" => "distinguishes_dis",
+        //         "value" => ""
+        //     ],
         // ];
+
         $columns = [
             [
-                "key" => "distinguishes_dis",
+                "key" => "facebook",
                 "value" => ""
             ],
+            [
+                "key" => "youtube",
+                "value" => ""
+            ],
+            [
+                "key" => "x",
+                "value" => ""
+            ],
+            [
+                "key" => "insta",
+                "value" => ""
+            ],
+
         ];
         DB::table('varibales')->insert($columns);
-
-
     }
 }

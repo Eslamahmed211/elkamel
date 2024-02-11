@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elkamel</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Public Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Public Sans";
+        direction: rtl;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- start navbar  -->
+    <div class="bg-[#EF8B1D] pb-1">
+      <div class="relative lg:hidden">
+        <div class="flex justify-between items-center px-5">
+          <img src="../images/logo.svg" alt="image" class="-mr-8" />
+          <img
+            id="menu"
+            src="../images/hamburger.png"
+            alt="image"
+            class="w-8 cursor-pointer"
+          />
+        </div>
+        <div id="links" class="absolute bg-[#EF8B1D] z-20 py-5 hidden">
+          <ul class="flex flex-wrap gap-10 lg:hidden justify-center px-5">
+            <li class="relative">
+              <a href="/index.html" class="text-[20px] font-[700] text-[#222]"
+                >الرئيسية</a
+              >
+            </li>
+            <li>
+              <a
+                href="./aboutus.html"
+                class="text-[20px] font-[700] text-[#222]"
+                >عن الكامل</a
+              >
+            </li>
+            <li>
+              <a
+                href="./services.html"
+                class="text-[20px] font-[700] text-[#222]"
+                >خدماتنا</a
+              >
+            </li>
+            <li>
+              <a
+                href="./projects.html"
+                class="text-[20px] font-[700] text-[#222]"
+                >مشاريعنا</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-[20px] font-[700] text-[#222]"
+                >المركز الاعلامي</a
+              >
+            </li>
+            <li>
+              <a href="./questions.html" class="text-[20px] font-[700] text-[#042E6F] "
+                >أسئلة شائعة</a
+              >
+            </li>
+            <li>
+              <a
+                href="./contactus.html"
+                class="text-[20px] font-[700] text-[#222]"
+                >تواصل معنا</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul
+        class="hidden bg-white lg:flex justify-between items-center px-20 rounded-t-[5px] rounded-b-[200px]"
+      >
+        <li>
+          <a href="/index.html" class="text-[20px] font-[700] text-[#222]"
+            >الرئيسية</a
+          >
+        </li>
+        <li>
+          <a href="./aboutus.html" class="text-[20px] font-[700] text-[#222]"
+            >عن الكامل</a
+          >
+        </li>
+        <li>
+          <a href="./services.html" class="text-[20px] font-[700] text-[#222]"
+            >خدماتنا</a
+          >
+        </li>
+        <li>
+          <a href="/index.html"><img src="/images/logo.svg" /></a>
+        </li>
+        <li>
+          <a href="./projects.html" class="text-[20px] font-[700] text-[#222]"
+            >مشاريعنا</a
+          >
+        </li>
+        <li>
+          <a href="#" class="text-[20px] font-[700] text-[#222]"
+            >المركز الاعلامي</a
+          >
+        </li>
+        <li class="relative">
+          <a
+            href="./questions.html"
+            class="text-[20px] font-[700] text-[#042E6F]"
+          >
+            أسئلة شائعة</a
+          >
+          <span
+            class="w-[45px] h-[8px] bg-[#EF8B1D] rounded-[4px] absolute top-[182%] left-[50%] translate-x-[-50%]"
+          ></span>
+        </li>
+        <li class="relative">
+          <a href="./contactus.html" class="text-[20px] font-[700] text-[#222]"
+            >تواصل معنا</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- end navbar -->
+
+    <!-- start quesion  -->
+    <div class="bg-[#e6eaf1] pb-20">
+      <div class="p-5 md:container pt-20">
+        <p
+          class="text-[32px] lg:text-[45px] font-[700] text-[#1B3764] text-center relative"
+        >
+          أسئلة متكررة؟
+          <span
+            class="bg-[#FFAF51] w-[55px] h-[3px] absolute left-[50%] -bottom-5 rounded-full"
+          ></span>
+        </p>
+      </div>
+      <div
+        class="p-5 md:container grid grid-cols-1 md:grid-cols-2 gap-10 gap-x-32 mt-12"
+      >
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+        <details class="p-5 border-b border-b-[#1b37645a]">
+          <summary class="text-[24px] font-[700] text-[#1B3764] cursor-pointer">
+            هل تقدمون خصومات للتعليم؟
+          </summary>
+          <p class="text-[19px] text-[#969AA0] font[400]">
+            تستخدم العديد من حزم النشر المكتبي ومحرري صفحات الويب الآن لوريم
+            إيبسوم كنص نموذجي افتراضي ، وتكشف الزاوية عن العديد من مواقع الويب
+            التي لا تزال في مهدها.
+          </p>
+        </details>
+      </div>
+    </div>
+    <!-- end question  -->
+
+    <!-- start footer  -->
+    <div class="mb-24 relative">
+      <img
+        src="../images/bgFooter.svg"
+        alt="img"
+        class="bg-cover bg-no-repeat w-full absolute top-0 left-0 z-[-1]"
+      />
+      <div class="p-5 container">
+        <div
+          class="bg-white p-10 rounded-[10px] flex flex-col lg:flex-row gap-5 justify-center items-center mt-[3.5rem] shadow-2xl"
+        >
+          <div
+            class="border-[2px] border-gray-400 py-1 px-2 flex items-center gap-3 md:min-w-[512px]"
+          >
+            <div
+              class="max-w-[80px] md:max-w-[180px] bg-[#042E6F] rounded-[4px] flex justify-center text-white px-10 py-3 cursor-pointer"
+            >
+              <p class="whitespace-nowrap text-center">اشترك الأن</p>
+            </div>
+            <input
+              type="text"
+              placeholder="ادخل البريد الالكتروني"
+              class="outline-none border-none flex-grow"
+            />
+          </div>
+          <p class="text-[20px] lg:text-[32px] font-[400] text-[#0A142F]">
+            ابدء في التواصل معنا من هنا
+          </p>
+        </div>
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center border-b py-10"
+        >
+          <div>
+            <img src="../images/social.svg" alt="image" />
+          </div>
+          <div class="flex flex-wrap gap-5 md:gap-10 lg:gap-20 items-center">
+            <p class="text-[16px] text-[#0A142F] font-[400]">تواصل معنا</p>
+            <p class="text-[16px] text-[#0A142F] font-[400]">مشاريعنا</p>
+            <p class="text-[16px] text-[#0A142F] font-[400]">خدماتنا</p>
+            <p class="text-[16px] text-[#0A142F] font-[400]">عن المكتب</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center mt-5"
+        >
+          <p>شروط الخدمة سياسة الخصوصية</p>
+          <img src="../images/logo.svg" alt="image" />
+          <p>© 2019 Lift Media. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    <!-- end footer  -->
+  </body>
+</html>

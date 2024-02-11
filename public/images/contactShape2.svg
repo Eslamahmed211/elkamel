@@ -1,0 +1,22 @@
+<svg width="189" height="199" viewBox="0 0 189 199" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 81" opacity="0.8">
+<g id="Rectangle 9">
+<mask id="path-1-inside-1_56_4784" fill="white">
+<rect x="189" y="165.668" width="141.306" height="118.567" rx="4" transform="rotate(-180 189 165.668)"/>
+</mask>
+<rect x="189" y="165.668" width="141.306" height="118.567" rx="4" transform="rotate(-180 189 165.668)" stroke="#2489D3" stroke-width="12" mask="url(#path-1-inside-1_56_4784)"/>
+</g>
+<g id="Rectangle 11">
+<mask id="path-2-inside-2_56_4784" fill="white">
+<rect x="75.3057" y="118.566" width="141.306" height="118.567" rx="4" transform="rotate(-180 75.3057 118.566)"/>
+</mask>
+<rect x="75.3057" y="118.566" width="141.306" height="118.567" rx="4" transform="rotate(-180 75.3057 118.566)" stroke="#2489D3" stroke-width="12" mask="url(#path-2-inside-2_56_4784)"/>
+</g>
+<g id="Rectangle 10">
+<mask id="path-3-inside-3_56_4784" fill="white">
+<rect x="156.516" y="198.152" width="141.306" height="118.567" rx="4" transform="rotate(-180 156.516 198.152)"/>
+</mask>
+<rect x="156.516" y="198.152" width="141.306" height="118.567" rx="4" transform="rotate(-180 156.516 198.152)" stroke="#2489D3" stroke-width="16" mask="url(#path-3-inside-3_56_4784)"/>
+</g>
+</g>
+</svg>

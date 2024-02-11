@@ -31,6 +31,7 @@ class AuthServiceProvider extends ServiceProvider
 
 
 
+
             return in_array($role, (json_decode($user_role->permissions)));
         });
     }

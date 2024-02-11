@@ -53,9 +53,26 @@ function update_home($key , $value)
 
 }
 
+if (!function_exists('generateSlug')) {
+    function generateSlug($productName)
+    {
+        $slug = strtolower($productName);
+        $slug = preg_replace('/[^a-z0-9\p{L}]+/u', '-', $slug);
+        $slug = trim($slug, '-');
+        return $slug;
+    }
+}
+
+
 
 function update_varibale($key , $value)
 {
+
+    if (is_null($value)) {
+        $value = "" ;
+    }
+
+
     varibale::where("key", $key )->update(["value" => $value]);
 
 }

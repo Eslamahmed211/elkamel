@@ -10,8 +10,5 @@ class home extends Model
     use HasFactory;
     protected $fillable = ["key", "value"];
 
-    // protected $casts = [
-    //     'value' => 'string',
-    // ];
 
 }

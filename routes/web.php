@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\profile\profileController;
+use App\Models\page;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
@@ -27,3 +30,29 @@ Route::get('delete_img', function () {
 
     return redirect()->back()->with("success", "تم ازالة الصورة بنجاح");
 });
+
+Route::get('/', function () {
+    return view("users/home");
+});
+Route::get('about', function () {
+    return view("users/about");
+});
+Route::get('services', function () {
+    return view("users/services");
+});
+Route::get('questions', function () {
+    return view("users/questions");
+});
+Route::get('contactus', function () {
+    return view("users/contactus");
+});
+
+Route::get('/pages/{slug}', function ($slug) {
+
+    $page = page::where("slug", $slug)->first();
+    return view("users/page", compact("page"));
+});
+
+
+Route::post('send_message', [MessageController::class, "create"]);
+Route::post('email', [MessageController::class, "email"]);
