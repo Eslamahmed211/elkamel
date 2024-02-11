@@ -10,6 +10,7 @@ use App\Http\Controllers\admin\workController;
 use App\Http\Controllers\faqsController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\missionController;
+use App\Http\Controllers\projectContrller;
 use App\Http\Controllers\SayController;
 use Illuminate\Support\Facades\Route;
 
@@ -109,4 +110,16 @@ Route::prefix("pages")->middleware('checkRole:pages')->group(function () {
     Route::DELETE('destroy', [pageContoller::class, 'destroy']);
     Route::get('{page}/edit', [pageContoller::class, 'edit']);
     Route::put('{page}', [pageContoller::class, 'update']);
+});
+
+
+
+
+Route::prefix("projects")->middleware('checkRole:projects')->group(function () {
+    Route::get('/', [projectContrller::class, 'index']);
+    Route::put('header', [projectContrller::class, 'update_project_header']);
+    Route::post('/', [projectContrller::class, 'store_projects']);
+    Route::delete('destroy', [projectContrller::class, 'destroy']);
+    Route::get('{project}/edit', [projectContrller::class, 'edit']);
+    Route::put('{project}', [projectContrller::class, 'update']);
 });

@@ -3,7 +3,7 @@
 
         {{-- <a href="/home" class="p-0"> <img src="{{ getLogo() }}" alt="logo" class="logo d-lg-none"></a> --}}
         <a href="/home" class="p-0"> <img src="/images/logog.png" alt="logo" class="logo d-lg-none"></a>
-        @can('has','home')
+        @can('has', 'home')
             <li class="home">
                 <a href="/admin/home"> <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -14,7 +14,7 @@
 
             </li>
         @endcan
-        @can('has','about')
+        @can('has', 'about')
             <li class="about">
                 <a href="/admin/about"> <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -28,7 +28,7 @@
 
             </li>
         @endcan
-        @can('has','services')
+        @can('has', 'services')
             <li class="services">
                 <a href="/admin/services"> <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -39,7 +39,20 @@
 
             </li>
         @endcan
-        @can('has','faqs')
+
+        @can('has', 'projects')
+            <li class="projects">
+                <a href="/admin/projects"> <svg  width="20"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+                  </svg>
+
+                    مشريعنا</a>
+
+            </li>
+        @endcan
+
+
+        @can('has', 'faqs')
             <li class="faqs">
                 <a href="/admin/faqs"> <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -50,7 +63,7 @@
 
             </li>
         @endcan
-        @can('has','social')
+        @can('has', 'social')
             <li class="social">
                 <a href="/admin/social"> <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -64,20 +77,20 @@
         @endcan
 
         @can('has', 'pages')
-        <li class="pages">
-            <a href="/admin/pages"> <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z">
-                    </path>
-                </svg> الصفحات </a>
+            <li class="pages">
+                <a href="/admin/pages"> <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z">
+                        </path>
+                    </svg> الصفحات </a>
 
-        </li>
-    @endcan
+            </li>
+        @endcan
 
 
-    
-        @can('has','roles')
+
+        @can('has', 'roles')
             <li class="roles">
                 <a href="/admin/roles"> <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -88,7 +101,7 @@
 
             </li>
         @endcan
-        @can('has','users')
+        @can('has', 'users')
             <li class="users">
                 <a href="/admin/users"> <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

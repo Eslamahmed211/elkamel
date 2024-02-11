@@ -125,24 +125,39 @@ class DatabaseSeeder extends Seeder
         //     ],
         // ];
 
+        // $columns = [
+        //     [
+        //         "key" => "facebook",
+        //         "value" => ""
+        //     ],
+        //     [
+        //         "key" => "youtube",
+        //         "value" => ""
+        //     ],
+        //     [
+        //         "key" => "x",
+        //         "value" => ""
+        //     ],
+        //     [
+        //         "key" => "insta",
+        //         "value" => ""
+        //     ],
+
+        // ];
+
         $columns = [
             [
-                "key" => "facebook",
+                "key" => "header_project_img",
                 "value" => ""
             ],
             [
-                "key" => "youtube",
+                "key" => "header_project_dis",
                 "value" => ""
             ],
             [
-                "key" => "x",
+                "key" => "project_dis",
                 "value" => ""
             ],
-            [
-                "key" => "insta",
-                "value" => ""
-            ],
-
         ];
         DB::table('varibales')->insert($columns);
     }
