@@ -1,8 +1,5 @@
 @extends('users.layout')
 
-
-
-
 @section('body')
     <!-- start landing -->
     <div class="bg-[url(./images/headerBackgrond.png)] bg-no-repeat bg-cover overflow-x-hidden">
@@ -68,30 +65,24 @@
                 <p class="text-[28px] md:text-[32px] font-[400] text-black max-w-[450px]">
                     ما الذي <span class="text-[#EF8B1D]"> يميزنا ؟</span>
                 </p>
-                <div class="flex items-center justify-between">
-                    <img src="./images/icon1.svg" alt="image" class="w-24 mt-5" />
-                    <p class="text-[16px] lg:text-[16px] font-[400] text-[#696984] max-w-[380px]">
-                        وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية
-                        هيالشكلوليسالمحتوى)
-                    </p>
-                </div>
-                <div class="flex items-center justify-center">
-                    <img src="./images/icon2.svg" alt="image" class="w-24 mt-5" />
-                    <p class="text-[16px] lg:text-[16px] font-[400] text-[#696984] max-w-[380px]">
-                        وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية
-                        هيالشكلوليسالمحتوى)
-                    </p>
-                </div>
-                <div class="flex items-center justify-center">
-                    <img src="./images/icon1.svg" alt="image" class="w-24 mt-5" />
-                    <p class="text-[16px] lg:text-[16px] font-[400] text-[#696984] max-w-[380px]">
-                        وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية
-                        هيالشكلوليسالمحتوى)
-                    </p>
-                </div>
+
+                @foreach (App\Models\distinguishe::get() as $distinguishe)
+                    <div class="flex items-center">
+                        <img src="@if ($loop->index % 2 == 0) ./images/icon1.svg
+                    @else
+                    ./images/icon2.svg @endif"
+                            alt="image" class="w-24 mt-0" />
+                        <p class="text-[16px] lg:text-[16px] font-[400] text-[#696984] max-w-[380px]">
+                            {{ $distinguishe->dis }}</p>
+                    </div>
+                @endforeach
+
+
+
+
             </div>
             <div>
-                <img src="./images/people.svg" alt="image" />
+                <img src="{{path(variable('distinguishes_img'))}}" alt="image" />
             </div>
         </div>
     </div>
