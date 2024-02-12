@@ -76,3 +76,13 @@ function update_varibale($key , $value)
     varibale::where("key", $key )->update(["value" => $value]);
 
 }
+
+
+function fixDate($date)
+{
+
+    $dateTimeObj = new DateTime($date);
+    $date = $dateTimeObj->format('Y-m-d h:i:s A');
+
+    return $date;
+}

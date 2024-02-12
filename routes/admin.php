@@ -144,3 +144,9 @@ Route::prefix("projects")->middleware('checkRole:projects')->group(function () {
     Route::get('product_images/changeOrder', [projectContrller::class, 'changeOrder']);
     Route::DELETE('project_images/destroy', [projectContrller::class, 'destroyImgs']);
 });
+
+
+Route::middleware('checkRole:emails')->prefix("emails")->group(function () {
+    Route::get("/", [workController::class,"emails_index"]);
+    Route::get("export", [workController::class,"emails_export"]);
+});
