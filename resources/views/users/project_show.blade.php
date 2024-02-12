@@ -64,14 +64,17 @@
                 <img src="../images/shapes.svg" alt="img" class="absolute top-0 left-0" />
 
                 <div class="basis-[50%]">
-                    <img style="border-radius: 5px;border: none" src="{{ path("$project->img") }}" alt="image" class="  " />
+                    <img style="border-radius: 5px;border: none" src="{{ path("$project->img") }}" alt="image"
+                        class="  " />
                 </div>
 
                 <div class="basis-[60%]">
-                    <p class="text-[24px] font-[700] text-[#042E6F] mb-5">{{ $project->title }}</p>
+                    <p class="text-[24px] font-[700] text-[#042E6F] mb-2">{{ $project->title }}</p>
 
-                    <p class="text-[24px] font-[700] text-[#042E6F] mb-5">{{ $project->start_at }} <span
+                    <p class="text-[20px] font-[700] text-[#042E6F] mb-2">{{ $project->start_at }} <span
                             style="margin-right: 15px">{{ $project->end_at }} </span> </p>
+
+                            <p class="text-[18px] font-[700] text-[#042E6F] mb-2">نسبة الاكتمال  % {{ $project->percent }} </p>
 
 
                     <p class="text-[20px] font-[400] text-[#fff] max-w-[558px]">

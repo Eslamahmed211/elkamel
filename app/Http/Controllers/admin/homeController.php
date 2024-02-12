@@ -31,6 +31,25 @@ class homeController extends Controller
         return redirect()->back()->with('success', 'تم التعديل بنجاح');
     }
 
+    function distinguishes_img(Request $request)
+    {
+        $data = $request->validate([
+            "distinguishes_img" => "nullable|image",
+        ]);
+
+        if (isset($data["distinguishes_img"])) {
+            $data["distinguishes_img"] = Storage::put("public/home", $data["distinguishes_img"]);
+        }
+
+
+        if (isset($data["distinguishes_img"])) {
+            update_varibale("distinguishes_img", $data["distinguishes_img"]);
+        }
+
+
+        return redirect()->back()->with('success', 'تم التعديل بنجاح');
+    }
+
 
     function section2(Request $request)
     {

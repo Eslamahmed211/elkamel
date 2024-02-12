@@ -7,6 +7,7 @@ use App\Http\Controllers\admin\rolesController;
 use App\Http\Controllers\admin\serviceContrller;
 use App\Http\Controllers\admin\users\userController;
 use App\Http\Controllers\admin\workController;
+use App\Http\Controllers\DistinguisheController;
 use App\Http\Controllers\faqsController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\missionController;
@@ -49,7 +50,21 @@ Route::middleware('checkRole:home')->prefix("home")->group(function () {
     Route::post('section2', [homeController::class, 'section2']);
     Route::post('what_saying', [homeController::class, 'what_saying']);
     Route::post('call_us', [homeController::class, 'call_us']);
+    Route::post('distinguishes_img', [homeController::class, 'distinguishes_img']);
 });
+
+Route::middleware('checkRole:home')->prefix("saying")->group(function () {
+    Route::post("/", [SayController::class, "store"]);
+    Route::put("update", [SayController::class, "update"]);
+    Route::delete("destroy", [SayController::class, "destroy"]);
+});
+
+Route::middleware('checkRole:home')->prefix("distinguishes")->group(function () {
+    Route::post("/", [DistinguisheController::class, "store"]);
+    Route::put("update", [DistinguisheController::class, "update"]);
+    Route::delete("destroy", [DistinguisheController::class, "destroy"]);
+});
+
 
 
 Route::middleware('checkRole:faqs')->prefix("faqs")->group(function () {

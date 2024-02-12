@@ -232,7 +232,6 @@ function validate(the_form = "theForm") {
 
             instance.setContent("الحقل ده مطلوب");
 
-            console.error(input);
 
             $([document.documentElement, document.body]).animate(
                 {

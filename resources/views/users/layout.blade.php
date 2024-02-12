@@ -220,7 +220,7 @@
 
                 <div class="flex flex-wrap gap-5 md:gap-10 lg:gap-20 items-center">
                     <p class="text-[16px] text-[#0A142F] font-[400]"><a href="/contactus">تواصل معنا</a></p>
-                    <p class="text-[16px] text-[#0A142F] font-[400]">مشاريعنا</p>
+                    <p class="text-[16px] text-[#0A142F] font-[400]"><a href="/projects">مشاريعنا</a></p>
                     <p class="text-[16px] text-[#0A142F] font-[400]"><a href="/services">خدماتنا</a></p>
                     <p class="text-[16px] text-[#0A142F] font-[400]"> <a href="/about#office">عن المكتب</a></p>
                 </div>

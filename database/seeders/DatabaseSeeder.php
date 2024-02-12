@@ -145,19 +145,26 @@ class DatabaseSeeder extends Seeder
 
         // ];
 
+        // $columns = [
+        //     [
+        //         "key" => "header_project_img",
+        //         "value" => ""
+        //     ],
+        //     [
+        //         "key" => "header_project_dis",
+        //         "value" => ""
+        //     ],
+        //     [
+        //         "key" => "project_dis",
+        //         "value" => ""
+        //     ],
+        // ];
         $columns = [
             [
-                "key" => "header_project_img",
+                "key" => "distinguishes_img",
                 "value" => ""
             ],
-            [
-                "key" => "header_project_dis",
-                "value" => ""
-            ],
-            [
-                "key" => "project_dis",
-                "value" => ""
-            ],
+
         ];
         DB::table('varibales')->insert($columns);
     }
