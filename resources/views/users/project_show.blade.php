@@ -64,7 +64,7 @@
                 <img src="../images/shapes.svg" alt="img" class="absolute top-0 left-0" />
 
                 <div class="basis-[50%]">
-                    <img src="{{ path("$project->img") }}" alt="image" class="  " />
+                    <img style="border-radius: 5px;border: none" src="{{ path("$project->img") }}" alt="image" class="  " />
                 </div>
 
                 <div class="basis-[60%]">
