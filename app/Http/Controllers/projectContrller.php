@@ -57,6 +57,9 @@ class projectContrller extends Controller
         }
 
 
+        $data['slug'] = generateSlug($data['title']);
+
+
 
         project::create($data);
 
@@ -91,6 +94,8 @@ class projectContrller extends Controller
             "long_dis" => "nullable",
             "percent" => "nullable",
         ]);
+
+        $data['slug'] = generateSlug($data['title']);
 
 
         if (isset($data['img'])) {

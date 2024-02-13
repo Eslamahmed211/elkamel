@@ -43,6 +43,7 @@ class serviceContrller extends Controller
             "dis" => "required|string",
         ]);
 
+
         $data['img'] = Storage::put("public/services", $data['img']);
 
         service::create($data);
@@ -59,7 +60,7 @@ class serviceContrller extends Controller
         return redirect()->back()->with("success", "تم الازالة بنجاح");
     }
 
-    public function update(Request $request , service $service )
+    public function update(Request $request, service $service)
     {
 
         $data = $request->validate([
@@ -68,17 +69,19 @@ class serviceContrller extends Controller
             "dis" => "required|string",
         ]);
 
+
+
         if (isset($data['img'])) {
             $data['img'] = Storage::put("public/services", $data['img']);
         }
 
         $service->update($data);
 
-        return redirect()->back()->with('success','تم التعديل بنجاح');
-
+        return redirect()->back()->with('success', 'تم التعديل بنجاح');
     }
 
-    function edit(service $service ) {
-        return view("admin/services/edit" , compact("service"));
+    function edit(service $service)
+    {
+        return view("admin/services/edit", compact("service"));
     }
 }

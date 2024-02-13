@@ -56,9 +56,9 @@ Route::get('/pages/{slug}', function ($slug) {
     $page = page::where("slug", $slug)->first();
     return view("users/page", compact("page"));
 });
-Route::get('/projects/{id}', function ($id) {
+Route::get('/projects/{slug}', function ($slug) {
 
-    $project = project::where("id", $id)->first();
+    $project = project::where("slug", $slug)->first();
     return view("users/project_show", compact("project"));
 });
 

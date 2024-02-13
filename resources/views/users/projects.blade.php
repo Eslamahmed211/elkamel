@@ -57,7 +57,7 @@
                             {{ $project->short_dis }}
 
                         </p>
-                        <a href="/projects/{{ $project->id }}">
+                        <a href="/projects/{{ $project->slug }}">
                             <button
                                 class="border-2 border-[#042E6F] flex items-center gap-4 rounded-full py-4 w-fit px-7 group hover:bg-[#042E6F] text-[#042E6F] hover:text-white transition-all duration-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
