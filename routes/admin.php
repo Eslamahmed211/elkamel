@@ -150,3 +150,6 @@ Route::middleware('checkRole:emails')->prefix("emails")->group(function () {
     Route::get("/", [workController::class,"emails_index"]);
     Route::get("export", [workController::class,"emails_export"]);
 });
+
+Route::middleware('checkRole:messages')->get("messages", [workController::class,"messages_index"]);
+Route::middleware('checkRole:messages')->delete("messages/destroy", [workController::class,"messages_destroy"]);

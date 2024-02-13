@@ -145,7 +145,7 @@
                         class="border-2 p-5 outline-none lg:min-w-[480px]" required />
                     <input name="email" type="email" placeholder=" البريد الإلكتروني"
                         class="border-2 p-5 outline-none lg:min-w-[480px]" required />
-                    <input name="phone" type="text" placeholder=" تلفون"
+                    <input name="phone" type="text" placeholder=" التليفون"
                         class="border-2 p-5 outline-none lg:min-w-[480px]" required />
                     <textarea name="message" placeholder="رسالة" class="border-2 p-5 outline-none lg:min-w-[480px] min-h-[12rem]"
                         required></textarea>

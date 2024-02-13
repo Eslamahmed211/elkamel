@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\email;
+use App\Models\message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -47,4 +48,19 @@ class workController extends Controller
 
         return response()->download($filePath);
     }
+
+
+    function messages_index()
+    {
+        $messages = message::orderBy("id", "desc")->get();
+        return view("admin/messages", compact("messages"));
+    }
+
+    public function messages_destroy(Request $request)
+    {
+        $message = message::findOrFail($request->message_id);
+        $message->delete();
+        return redirect()->back()->with("success", "تم الازالة بنجاح");
+    }
+
 }
