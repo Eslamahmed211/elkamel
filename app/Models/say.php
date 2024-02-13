@@ -9,5 +9,5 @@ class say extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["name" , "dis"];
+    protected $fillable = ["name" , "dis" , "stars"];
 }

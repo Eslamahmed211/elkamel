@@ -1,6 +1,8 @@
 @extends('users.layout')
 
 @section('body')
+
+
     <!-- start landing -->
     <div class="bg-[url(./images/headerBackgrond.png)] bg-no-repeat bg-cover overflow-x-hidden">
         <div class="bg-primaryColor relative grid place-content-center place-items-center">
@@ -82,7 +84,7 @@
 
             </div>
             <div>
-                <img src="{{path(variable('distinguishes_img'))}}" alt="image" />
+                <img src="{{ path(variable('distinguishes_img')) }}" alt="image" />
             </div>
         </div>
     </div>
@@ -180,3 +182,7 @@
     </div>
     <!-- end contact us  -->
 @endsection
+
+
+
+

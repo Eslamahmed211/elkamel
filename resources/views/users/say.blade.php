@@ -32,12 +32,32 @@
                     <div
                         class="p-5 rounded-xl bg-white border-l-[.6rem] border-[#EF8B1D] shadow-xl absolute top-[70%] right-0 md:-right-[7rem] lg:-right-[10rem] slidee">
                         <p
-                            class="text-[16px] lg:text-[16px] text-[#5F5F7E] font-[400] p-4 border-l border-[#BDBDD1] max-w-[400px] leading-[25px]">
+                            class="text-[16px] lg:text-[16px] text-[#5F5F7E] font-[400] p-4  max-w-[400px] leading-[25px]">
                             {{ $say->dis }}
                         </p>
                         <div class="mt-4 flex items-center justify-between">
-                            <div>
-                                <img src="./images/starts.svg" alt="image" />
+                            <div class="mx-2">
+                                {{-- <img src="./images/starts.svg" alt="image" /> --}}
+
+                                @php
+                                    $index = 5;
+                                @endphp
+
+
+                                @for ($i = 1; $i <= $say->stars; $i++)
+                                    <i class="fa-solid fa-star" style="color: #fba333"></i>
+
+                                    @php
+                                        $index--;
+                                    @endphp
+                                @endfor
+
+                                @for ($i = $index; $i >= 1; $i--)
+                                    <i class="fa-regular fa-star"></i>
+                                @endfor
+
+
+
 
                             </div>
                             <p class="text-[#5F5F7E] text-[16px] lg:text-[16px] font-[600]">

@@ -28,10 +28,6 @@
                     aria-selected="true">
                     ماذا يقولون؟</button>
 
-                <button onclick="change('nav-saying')" class="nav-link " id="nav-saying-tab" data-bs-toggle="tab"
-                    data-bs-target="#nav-saying" type="button" role="tab" aria-controls="nav-saying"
-                    aria-selected="true">
-                    الاراء</button>
 
 
                 <button onclick="change('nav-call_us')" class="nav-link " id="nav-call_us-tab" data-bs-toggle="tab"
@@ -116,8 +112,8 @@
                     </table>
 
 
-                    <form method="post" action="{{ url('admin/saying/destroy') }}" class="modal fade"
-                        id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <form method="post" action="{{ url('admin/saying/destroy') }}" class="modal fade" id="exampleModal2"
+                        tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         @csrf
                         @method('delete')
                         <div class="modal-dialog">
@@ -177,90 +173,15 @@
 
             </div>
 
-            <div class="tab-pane fade show " id="nav-saying" role="tabpanel" aria-labelledby="nav-saying-tab"
+            {{-- <div class="tab-pane fade show " id="nav-saying" role="tabpanel" aria-labelledby="nav-saying-tab"
                 tabindex="0">
                 <div class="py-3  px-2 mt-3 bg-white rounded">
                     @include('admin.home.saying')
                 </div>
 
-                <div class="tableSpace">
 
-                    <table class="not">
-                        <thead>
-
-
-                            <tr>
-                                <th>العنوان</th>
-                                <th> الإجراءات </th>
-                            </tr>
-
-                        </thead>
-
-                        <tbody>
-
-                            @foreach (App\Models\say::get() as $say)
-                                <tr>
-
-                                    <td>{{ $say->name }}</td>
-
-                                    <td data-text="الإجراءات">
-                                        <div>
-
-                                            <div type="button" data-id="{{ $say->id }}"
-                                                data-name="{{ $say->name }}" data-dis="{{ $say->dis }}"
-                                                onclick="show_new_value_model(this)" data-bs-toggle="modal"
-                                                data-bs-target="#theForm6" data-tippy-content="تعديل"
-                                                class="square-btn ltr has-tip">
-                                                <i class="far fa-edit mr-2 icon" aria-hidden="true"></i>
-                                            </div>
-
-                                            <div type="button" data-id="{{ $say->id }}"
-                                                data-name="{{ $say->name }}" onclick="show_delete_model(this)"
-                                                data-bs-toggle="modal" data-bs-target="#exampleModal2"
-                                                data-tippy-content="حذف" class="square-btn ltr has-tip"><i
-                                                    class="far fa-trash-alt mr-2 icon" aria-hidden="true"></i></div>
-
-                                        </div>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-
-                    </table>
-
-
-                    <form method="post" action="{{ url('admin/saying/destroy') }}" class="modal fade"
-                        id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        @csrf
-                        @method('delete')
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">هل انت متاكد من ازالة ؟</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-
-                                <input type="hidden" name="say_id">
-
-                                <div class="modal-body">
-
-                                    <div id="model_title"> </div>
-                                </div>
-
-                                <div class="modal-footer">
-                                    <button class="btn btn-danger">ازالة</button>
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">اغلاق</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-
-
-                </div>
             </div>
-
+ --}}
 
             <div class="tab-pane fade show " id="nav-call_us" role="tabpanel" aria-labelledby="nav-call_us-tab"
                 tabindex="0">
@@ -298,6 +219,12 @@
                     </div>
 
 
+                    <div class="col-12" title="النجوم">
+                        <x-admin.forms.input class="checkThis"  min="0" max="5" type="number" id="stars" for="stars" value="5" lable_title="عدد النجوم" name="stars" >
+                        </x-admin.forms.input>
+                    </div>
+
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" onclick="validate('theForm6')" class="btn btn-primary">حفط التغيرات</button>
@@ -308,8 +235,8 @@
         </div>
     </form>
 
-    <form method="post" action="{{ url('admin/distinguishes/update') }}" class="modal fade" id="distinguishe_update" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form method="post" action="{{ url('admin/distinguishes/update') }}" class="modal fade" id="distinguishe_update"
+        tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         @csrf
         @method('PUT')
         <div class="modal-dialog">
@@ -332,7 +259,8 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" onclick="validate('distinguishe_update')" class="btn btn-primary">حفط التغيرات</button>
+                    <button type="button" onclick="validate('distinguishe_update')" class="btn btn-primary">حفط
+                        التغيرات</button>
 
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
                 </div>
@@ -427,6 +355,7 @@
             let data_id = element.getAttribute('data-id')
 
             $("#name").val(element.getAttribute('data-name'))
+            $("#stars").val(element.getAttribute('data-stars'))
             $("#dis").val(element.getAttribute('data-dis'))
 
             $("input[name='say_id']").val(data_id)
@@ -474,6 +403,70 @@
             $("#distinguishe_dis").val(element.getAttribute('data-dis'))
 
             $("input[name='distinguishe_id']").val(data_id)
+        }
+    </script>
+
+    <script>
+        function add_form() {
+            Swal.fire({
+                title: "اضافة ميزة",
+                html: `<form action="/admin/distinguishes" class=" mt-2 w-100" method="post" id="distinguishes_form">
+                    @csrf
+
+
+
+                        <label for="dis">الوصف</label>
+                        <textarea class="checkThis" name="dis"  rows="5"></textarea>
+
+
+                    <div class="p-2">
+                        <button type="button" onclick="validate('distinguishes_form')" class="mainBtn mt-3">اضافة</button>
+                    </div>
+                </form>
+                `,
+                showCloseButton: false,
+                showCancelButton: false,
+                showConfirmButton: false,
+                focusConfirm: false
+            });
+        }
+    </script>
+
+    <script>
+        function add_say() {
+            Swal.fire({
+                title: "اضافة رائ جديد",
+                html: `<form action="/admin/saying"  method="post" id="theForm4">
+    @csrf
+
+
+    <div class="col-12" title="الاسم">
+        <x-admin.forms.input class="checkThis" for="name" lable_title="الاسم" name="name" placeholder="الاسم">
+        </x-admin.forms.input>
+    </div>
+
+
+    <div data-title="الوصف" class="col-12 mb-2">
+        <label for="dis">الوصف</label>
+        <textarea class="checkThis" name="dis" cols="15" rows="5"></textarea>
+    </div>
+
+    <div class="col-12" title="النجوم">
+        <x-admin.forms.input class="checkThis" type="number"  min="0" max="5"  for="stars" value="5" lable_title="عدد النجوم" name="stars" >
+        </x-admin.forms.input>
+    </div>
+
+
+    <div class="p-2">
+        <button type="button" onclick="validate('theForm4')" class="mainBtn mt-3">اضافة رائ</button>
+    </div>
+</form>
+                `,
+                showCloseButton: false,
+                showCancelButton: false,
+                showConfirmButton: false,
+                focusConfirm: false
+            });
         }
     </script>
 @endsection

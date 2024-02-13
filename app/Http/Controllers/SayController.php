@@ -12,6 +12,7 @@ class SayController extends Controller
         $data = $request->validate([
             "name" => "required|string",
             "dis" => "required|string",
+            "stars" => "required|integer|min:0|max:5",
         ]);
 
 
@@ -33,6 +34,7 @@ class SayController extends Controller
         $data = $request->validate([
             "name" => "required|string",
             "dis" => "required|string",
+            "stars" => "required|integer|min:0|max:5",
             "say_id" => "required"
         ]);
 
