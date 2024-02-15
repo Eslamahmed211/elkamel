@@ -3,7 +3,8 @@
 
 <head>
 
-    <title>elkamel</title>
+    <title>{{ get_title() }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ get_logo() }}">
     @yield('title')
 
 

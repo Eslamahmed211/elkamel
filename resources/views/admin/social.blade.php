@@ -3,9 +3,19 @@
 
 @section('content')
     <div class=" mt-lg-2 mx-3 ">
-        <form action="/admin/social" class="row bg-white  py-4 px-2 rounded" method="post" id="theForm">
+        <form enctype="multipart/form-data" action="/admin/settings" class="row bg-white  py-4 px-2 rounded" method="post" id="theForm">
             @csrf
-            @method("put")
+            @method('put')
+
+            <div class="col-lg-6 col-12" title="title">
+                <x-admin.forms.input class="checkThis" value="{{ variable('title') }}" lable_title="اسم الموقع" name="title"
+                    placeholder="اسم الموقع"></x-admin.forms.input>
+            </div>
+
+            <div class="col-lg-6 col-12" title="لوجو">
+                <x-admin.forms.input  type="file" lable_title="لوجو الموقع" name="logo"
+                    placeholder="لوجو الموقع"></x-admin.forms.input>
+            </div>
 
             <div class="col-lg-6 col-12" title="facebook">
                 <x-admin.forms.input value="{{ variable('facebook') }}" lable_title="فيسبوك" name="facebook"
@@ -38,6 +48,6 @@
 
 @section('js')
     <script>
-        $('aside .social').addClass('active');
+        $('aside .settings').addClass('active');
     </script>
 @endsection

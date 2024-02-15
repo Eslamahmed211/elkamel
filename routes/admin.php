@@ -112,9 +112,9 @@ Route::middleware('checkRole:about')->prefix("features")->group(function () {
 });
 
 
-Route::middleware('checkRole:social')->prefix("social")->group(function () {
-    Route::get('/', [workController::class, 'social']);
-    Route::put('/', [workController::class, 'social_update']);
+Route::middleware('checkRole:settings')->prefix("settings")->group(function () {
+    Route::get('/', [workController::class, 'settings']);
+    Route::put('/', [workController::class, 'settings_update']);
 });
 
 

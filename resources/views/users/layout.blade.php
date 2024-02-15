@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elkamel</title>
+
+    <title>{{ get_title() }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ get_logo() }}">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +40,12 @@
         .swal2-popup {
             width: 25em !important;
         }
+
+        .logo {
+            max-width: 150px;
+            padding: 20px;
+            object-fit: contain;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -56,7 +65,7 @@
     <div class="bg-[#EF8B1D] pb-1">
         <div class="relative lg:hidden">
             <div class="flex justify-between items-center px-5">
-                <img src="/images/logo.svg" alt="image" class="-mr-8" />
+                <img src="{{ get_logo() }}" alt="image" class="-mr-8 logo" />
                 <img id="menu" src="/images/hamburger.png" alt="image" class="w-8 cursor-pointer" />
             </div>
             <div id="links" class="absolute bg-[#EF8B1D] z-20 py-5 hidden">
@@ -121,7 +130,7 @@
                 @endif
             </li>
             <li class="relative">
-                <a href="/"><img src="/images/logo.svg" /></a>
+                <a href="/"><img class="logo" src="{{ get_logo() }}" /></a>
             </li>
             <li class="relative">
 
@@ -236,7 +245,7 @@
                 </div>
 
 
-                <a href="/"><img src="/images/logo.svg" alt="image" /></a>
+                <a href="/"><img class="logo" src="{{ get_logo() }}" alt="image" /></a>
                 <p>© 2019 Lift Media. All rights reserved.</p>
             </div>
         </div>

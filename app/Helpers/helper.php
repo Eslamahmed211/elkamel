@@ -1,4 +1,3 @@
-
 <?php
 
 use App\Models\home;
@@ -38,19 +37,18 @@ if (!function_exists("check_Email")) {
 
 function home($title)
 {
-    return (home::where("key", $title)->first()->value)  ;
+    return (home::where("key", $title)->first()->value);
 }
 
 function variable($title)
 {
-    return (varibale::where("key", $title)->first()->value)  ;
+    return (varibale::where("key", $title)->first()->value);
 }
 
 
-function update_home($key , $value)
+function update_home($key, $value)
 {
-    home::where("key", $key )->update(["value" => $value]);
-
+    home::where("key", $key)->update(["value" => $value]);
 }
 
 if (!function_exists('generateSlug')) {
@@ -65,16 +63,15 @@ if (!function_exists('generateSlug')) {
 
 
 
-function update_varibale($key , $value)
+function update_varibale($key, $value)
 {
 
     if (is_null($value)) {
-        $value = "" ;
+        $value = "";
     }
 
 
-    varibale::where("key", $key )->update(["value" => $value]);
-
+    varibale::where("key", $key)->update(["value" => $value]);
 }
 
 
@@ -85,4 +82,17 @@ function fixDate($date)
     $date = $dateTimeObj->format('Y-m-d h:i:s A');
 
     return $date;
+}
+
+
+function get_logo()
+{
+
+    return path(variable("logo"));
+}
+
+function  get_title()
+{
+
+    return (variable("title"));
 }

@@ -22,7 +22,7 @@
 
         <div class="text-center">
             <a href="/">
-                <img src="/images/logog.png" alt="logo" class="logo" style="width: 236px ; height: 99px;"></a>
+                <img src="{{ get_logo() }}" alt="logo" class="logo" style="width: 236px ; height: 99px;"></a>
         </div>
 
 

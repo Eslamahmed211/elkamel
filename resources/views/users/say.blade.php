@@ -53,7 +53,7 @@
                                 @endfor
 
                                 @for ($i = $index; $i >= 1; $i--)
-                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star" style="color:gray"></i>
                                 @endfor
 
 

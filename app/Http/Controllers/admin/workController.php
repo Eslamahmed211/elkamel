@@ -10,19 +10,25 @@ use Illuminate\Support\Facades\Storage;
 
 class workController extends Controller
 {
-    function social()
+    function settings()
     {
         return view("admin/social");
     }
-    function social_update(Request $request)
+    function settings_update(Request $request)
     {
         $data = $request->validate([
+            "title" => "required|string",
             "facebook" => "nullable|string",
             "insta" => "nullable|string",
             "x" => "nullable|string",
             "youtube" => "nullable|string",
+            "logo" => "nullable|image",
         ]);
 
+
+        if (isset($data['logo'])) {
+            $data['logo'] = Storage::put("public/logo", $data['logo']);
+        }
 
         foreach ($data as $key => $value) {
             update_varibale($key, $value);
@@ -62,5 +68,4 @@ class workController extends Controller
         $message->delete();
         return redirect()->back()->with("success", "تم الازالة بنجاح");
     }
-
 }

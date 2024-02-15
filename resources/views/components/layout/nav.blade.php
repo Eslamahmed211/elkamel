@@ -2,8 +2,8 @@
     <nav>
 
         <div class="center">
-            {{-- <a href="/admin/home"> <img src="{{ getLogo() }}" alt="logo" class="logo"></a> --}}
-            <a href="/admin/home"> <img src="/images/logog.png" alt="logo" class="logo"></a>
+            <a href="/admin/home"> <img src="{{ get_logo() }}" alt="logo" class="logo"></a>
+            {{-- <a href="/admin/home"> <img src="/images/logog.png" alt="logo" class="logo"></a> --}}
 
         </div>
 

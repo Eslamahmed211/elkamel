@@ -159,13 +159,27 @@ class DatabaseSeeder extends Seeder
         //         "value" => ""
         //     ],
         // ];
+        // $columns = [
+        //     [
+        //         "key" => "distinguishes_img",
+        //         "value" => ""
+        //     ],
+
+        // ];
+
         $columns = [
             [
-                "key" => "distinguishes_img",
+                "key" => "logo",
                 "value" => ""
+            ],
+            [
+                "key" => "title",
+                "value" => "تكامل"
             ],
 
         ];
+
+
         DB::table('varibales')->insert($columns);
     }
 }
