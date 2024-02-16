@@ -68,7 +68,7 @@
                     ما الذي <span class="text-[#EF8B1D]"> يميزنا ؟</span>
                 </p>
 
-                @foreach (App\Models\distinguishe::get() as $distinguishe)
+                @foreach (App\Models\mission::get() as $distinguishe)
                     <div class="flex items-center">
                         <img src="@if ($loop->index % 2 == 0) ./images/icon1.svg
                     @else

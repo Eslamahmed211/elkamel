@@ -17,9 +17,9 @@
                     من نحنا وخدمتنا</button>
 
 
-                <button onclick="change('nav-distinguishes')" class="nav-link " id="nav-distinguishes-tab"
+                {{-- <button onclick="change('nav-distinguishes')" class="nav-link " id="nav-distinguishes-tab"
                     data-bs-toggle="tab" data-bs-target="#nav-distinguishes" type="button" role="tab"
-                    aria-controls="nav-distinguishes" aria-selected="true">ما الذي يميزنا ؟</button>
+                    aria-controls="nav-distinguishes" aria-selected="true">ما الذي يميزنا ؟</button> --}}
 
 
 
@@ -59,7 +59,7 @@
                     @include('admin.home.what_saying')
                 </div>
             </div>
-            <div class="tab-pane fade show " id="nav-distinguishes" role="tabpanel" aria-labelledby="nav-distinguishes-tab"
+            {{-- <div class="tab-pane fade show " id="nav-distinguishes" role="tabpanel" aria-labelledby="nav-distinguishes-tab"
                 tabindex="0">
                 <div class="py-3  px-2 mt-3 bg-white rounded">
                     @include('admin.home.distinguishes')
@@ -171,7 +171,7 @@
                 </div>
 
 
-            </div>
+            </div> --}}
 
             {{-- <div class="tab-pane fade show " id="nav-saying" role="tabpanel" aria-labelledby="nav-saying-tab"
                 tabindex="0">
@@ -220,7 +220,8 @@
 
 
                     <div class="col-12" title="النجوم">
-                        <x-admin.forms.input class="checkThis"  min="0" max="5" type="number" id="stars" for="stars" value="5" lable_title="عدد النجوم" name="stars" >
+                        <x-admin.forms.input class="checkThis" min="0" max="5" type="number"
+                            id="stars" for="stars" value="5" lable_title="عدد النجوم" name="stars">
                         </x-admin.forms.input>
                     </div>
 

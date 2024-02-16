@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\profile\profileController;
+use App\Models\course;
 use App\Models\page;
 use App\Models\project;
 use Illuminate\Http\Request;
@@ -50,6 +51,9 @@ Route::get('contactus', function () {
 Route::get('projects', function () {
     return view("users/projects");
 });
+Route::get('courses', function () {
+    return view("users/courses");
+});
 
 Route::get('/pages/{slug}', function ($slug) {
 
@@ -60,6 +64,11 @@ Route::get('/projects/{slug}', function ($slug) {
 
     $project = project::where("slug", $slug)->first();
     return view("users/project_show", compact("project"));
+});
+Route::get('/courses/{slug}', function ($slug) {
+
+    $course = course::where("slug", $slug)->first();
+    return view("users/course_show", compact("course"));
 });
 
 

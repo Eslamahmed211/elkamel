@@ -80,6 +80,9 @@
                         <a href="/services" class="text-[16px] font-[700] text-[#222]">خدماتنا</a>
                     </li>
                     <li>
+                        <a href="/courses" class="text-[16px] font-[700] text-[#222]">دوراتنا التدريبة</a>
+                    </li>
+                    <li>
                         <a href="/projects" class="text-[16px] font-[700] text-[#222]">مشاريعنا</a>
                     </li>
 
@@ -129,6 +132,20 @@
                         class="w-[45px] h-[8px] bg-[#EF8B1D] rounded-[4px] absolute top-[182%] left-[50%] translate-x-[-50%]"></span>
                 @endif
             </li>
+
+            <li class="relative">
+                <a href="/courses"
+                    class="text-[16px] font-[700] @if (request()->is('courses')) text-[#042E6F]
+                    @else
+                    text-[#222] @endif  ">دوراتنا
+                    التدريبة</a>
+
+                @if (request()->is('courses*'))
+                    <span
+                        class="w-[45px] h-[8px] bg-[#EF8B1D] rounded-[4px] absolute top-[182%] left-[50%] translate-x-[-50%]"></span>
+                @endif
+            </li>
+
             <li class="relative">
                 <a href="/"><img class="logo" src="{{ get_logo() }}" /></a>
             </li>
@@ -209,7 +226,8 @@
 
 
                     @if (!empty(variable('x')))
-                        <a target="_blank" href="{{ variable('x') }}"><i class="fa-brands fa-x-twitter fa-fw"></i></a>
+                        <a target="_blank" href="{{ variable('x') }}"><i
+                                class="fa-brands fa-x-twitter fa-fw"></i></a>
                     @endif
 
                     @if (!empty(variable('youtube')))

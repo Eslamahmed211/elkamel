@@ -8,6 +8,7 @@ use App\Http\Controllers\admin\serviceContrller;
 use App\Http\Controllers\admin\users\userController;
 use App\Http\Controllers\admin\workController;
 use App\Http\Controllers\DistinguisheController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\faqsController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\missionController;
@@ -147,9 +148,27 @@ Route::prefix("projects")->middleware('checkRole:projects')->group(function () {
 
 
 Route::middleware('checkRole:emails')->prefix("emails")->group(function () {
-    Route::get("/", [workController::class,"emails_index"]);
-    Route::get("export", [workController::class,"emails_export"]);
+    Route::get("/", [workController::class, "emails_index"]);
+    Route::get("export", [workController::class, "emails_export"]);
 });
 
-Route::middleware('checkRole:messages')->get("messages", [workController::class,"messages_index"]);
-Route::middleware('checkRole:messages')->delete("messages/destroy", [workController::class,"messages_destroy"]);
+Route::middleware('checkRole:messages')->get("messages", [workController::class, "messages_index"]);
+Route::middleware('checkRole:messages')->delete("messages/destroy", [workController::class, "messages_destroy"]);
+
+
+
+
+
+Route::prefix("courses")->middleware('checkRole:courses')->group(function () {
+    Route::get('/', [CourseController::class, 'index']);
+    Route::put('header', [CourseController::class, 'update_course_header']);
+    Route::post('/', [CourseController::class, 'store_courses']);
+    Route::post('{course}/storeImgs', [CourseController::class, 'storeImgs']);
+    Route::delete('destroy', [CourseController::class, 'destroy']);
+    Route::get('{course}/edit', [CourseController::class, 'edit']);
+    Route::get('{course}/imgs', [CourseController::class, 'img']);
+    Route::put('{course}', [CourseController::class, 'update']);
+
+    Route::get('product_images/changeOrder', [CourseController::class, 'changeOrder']);
+    Route::DELETE('course_images/destroy', [CourseController::class, 'destroyImgs']);
+});

@@ -64,21 +64,21 @@
                 <img src="../images/shapes.svg" alt="img" class="absolute top-0 left-0" />
 
                 <div class="basis-[50%]">
-                    <img style="border-radius: 5px;border: none" src="{{ path("$project->img") }}" alt="image"
+                    <img style="border-radius: 5px;border: none" src="{{ path("$course->img") }}" alt="image"
                         class="  " />
                 </div>
 
                 <div class="basis-[60%]">
-                    <p class="text-[24px] font-[700] text-[#042E6F] mb-2">{{ $project->title }}</p>
+                    <p class="text-[24px] font-[700] text-[#042E6F] mb-2">{{ $course->title }}</p>
 
-                    <p class="text-[20px] font-[700] text-[#042E6F] mb-2">{{ $project->start_at }} <span
-                            style="margin-right: 15px">{{ $project->end_at }} </span> </p>
+                    <p class="text-[20px] font-[700] text-[#042E6F] mb-2">{{ $course->start_at }} <span
+                            style="margin-right: 15px">{{ $course->end_at }} </span> </p>
 
-                    <p class="text-[18px] font-[700] text-[#042E6F] mb-2">نسبة الاكتمال % {{ $project->percent }} </p>
+                    <p class="text-[18px] font-[700] text-[#042E6F] mb-2">نسبة الاكتمال % {{ $course->percent }} </p>
 
 
                     <p class="text-[20px] font-[400] text-[#fff] max-w-[558px]">
-                        {{ $project->short_dis }}
+                        {{ $course->short_dis }}
                     </p>
                 </div>
             </div>
@@ -87,16 +87,16 @@
     <!-- end landing -->
 
     <div class="bg-gradient-to-b from-[#fceddc] to-white relative px-3 py-5">
-        <h1 style="text-align: center;font-weight: 900;font-size: 20px">تفاصيل المشروع</h1>
+        <h1 style="text-align: center;font-weight: 900;font-size: 20px">تفاصيل الدورة</h1>
 
         <div class="dis my-3 p-2">
-            <?= $project->long_dis ?>
+            <?= $course->long_dis ?>
         </div>
 
 
     </div>
 
-    <h1 style="text-align: center;font-weight: 900;font-size: 20px;margin-bottom: 15px">صور من المشروع</h1>
+    <h1 style="text-align: center;font-weight: 900;font-size: 20px;margin-bottom: 15px">صور من الدورة</h1>
 
 
     <!-- Swiper -->
@@ -107,10 +107,10 @@
 
             <div class="swiper-wrapper">
 
-                @foreach ($project->imgs as $img)
+                @foreach ($course->imgs as $img)
                     <div class="swiper-slide"><img src="{{ path("$img->img") }}"></div>
                 @endforeach
-                @foreach ($project->imgs as $img)
+                @foreach ($course->imgs as $img)
                     <div class="swiper-slide"><img src="{{ path("$img->img") }}"></div>
                 @endforeach
 
