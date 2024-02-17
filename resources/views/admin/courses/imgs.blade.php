@@ -150,9 +150,6 @@
 
 
         });
-
-
     </script>
-            <x-admin.extra.move model="courses/product_images"></x-admin.extra.move>
-
+    <x-admin.extra.move model="courses/product_images"></x-admin.extra.move>
 @endsection

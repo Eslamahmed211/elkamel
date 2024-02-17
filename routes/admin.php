@@ -86,6 +86,9 @@ Route::middleware('checkRole:services')->prefix("services")->group(function () {
     Route::delete('destroy', [serviceContrller::class, 'destroy']);
     Route::get('{service}/edit', [serviceContrller::class, 'edit']);
     Route::put('{service}', [serviceContrller::class, 'update']);
+
+    Route::get('changeOrder', [serviceContrller::class, 'changeOrder']);
+
 });
 
 

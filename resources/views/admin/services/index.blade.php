@@ -40,6 +40,12 @@
 
                 <div class="tableSpace">
 
+                    <p class="tip"><i aria-hidden="true" class="fas fa-info-circle "></i>
+
+                        يمكن تغير ترتيب الصور من خلال الازرار او من خلال Drag and Drop
+
+                    </p>
+
                     <table class="not">
                         <thead>
 
@@ -54,12 +60,24 @@
                         <tbody>
 
                             @foreach ($services as $service)
-                                <tr>
+                                <tr draggable='true' ondragstart='start()' ondragover='dragover()'>
+
+                                    <input type="hidden" value="{{ $service->id }}" class="ids">
+
 
                                     <td>{{ $service->title }}</td>
 
                                     <td data-text="الإجراءات">
                                         <div>
+                                            <div onclick="up(this)" data-tippy-content="فوق" class="square-btn ltr has-tip">
+                                                <i class=" fa-solid fa-up-long mr-2  icon" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div onclick="down(this)" data-tippy-content="تحت"
+                                                class="square-btn ltr has-tip">
+                                                <i class=" fa-solid fa-down-long mr-2  icon" aria-hidden="true"></i>
+                                            </div>
+
                                             <div onclick='window.location.href = "/admin/services/{{ $service->id }}/edit"'
                                                 data-tippy-content="تعديل" class="square-btn ltr has-tip"><i
                                                     class="far fa-edit mr-2 icon" aria-hidden="true"></i></div>
@@ -77,6 +95,11 @@
                         </tbody>
 
                     </table>
+
+                    @if (isset($services[0]->id))
+                        <x-admin.forms.mainBtn onclick="UpdateOrder()" icon="update" title="تحديث" class="mt-3">
+                        </x-admin.forms.mainBtn>
+                    @endif
 
                     <x-admin.forms.deleteModel model="services" id="service_id"></x-admin.forms.deleteModel>
 
@@ -153,4 +176,7 @@
             window.history.replaceState({}, "", newUrl);
         }
     </script>
+
+
+    <x-admin.extra.move model="services"></x-admin.extra.move>
 @endsection

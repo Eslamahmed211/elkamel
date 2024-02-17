@@ -1,14 +1,20 @@
 <form action="/admin/services" class="row" method="post" enctype="multipart/form-data" id="theForm">
     @csrf
 
-    <div class="col-lg-6 col-12" title="الصورة">
-        <x-admin.forms.input type="file" accept="image/*" for="img" lable_title="الصورة" name="img"
+    <div class="col-lg-4 col-12" title="الصورة">
+        <x-admin.forms.input class="checkThis" type="file" accept="image/*" for="img" lable_title="الصورة" name="img"
             placeholder="img">
         </x-admin.forms.input>
     </div>
 
-    <div class="col-lg-6 col-12" title="العنوان">
-        <x-admin.forms.input for="title" lable_title="العنوان" name="title" placeholder="العنوان">
+    <div class="col-lg-4 col-12" title="العنوان">
+        <x-admin.forms.input class="checkThis"   for="title" lable_title="العنوان" name="title" placeholder="العنوان">
+        </x-admin.forms.input>
+    </div>
+
+
+    <div class="col-lg-4 col-12" title="اللينك">
+        <x-admin.forms.input for="name" notRequired lable_title="اللينك" name="link" placeholder="اللينك">
         </x-admin.forms.input>
     </div>
 

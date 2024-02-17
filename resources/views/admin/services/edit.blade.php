@@ -17,15 +17,26 @@
             @csrf
             @method('put')
 
-            <div class="col-lg-6 col-12" title="الصورة">
+            <div class="col-lg-4 col-12" title="الصورة">
                 <x-admin.forms.input type="file" notRequired accept="image/*" for="img" lable_title="الصورة"
                     name="img" placeholder="img">
                 </x-admin.forms.input>
             </div>
 
-            <div class="col-lg-6 col-12" title="العنوان">
+
+
+
+
+            <div class="col-lg-4 col-12" title="العنوان">
                 <x-admin.forms.input for="title" value="{{ $service->title }}" lable_title="العنوان" name="title"
                     placeholder="العنوان">
+                </x-admin.forms.input>
+            </div>
+
+
+            <div class="col-lg-4 col-12" title="اللينك">
+                <x-admin.forms.input for="name" value="{{ $service->link }}" notRequired lable_title="اللينك"
+                    name="link" placeholder="اللينك">
                 </x-admin.forms.input>
             </div>
 

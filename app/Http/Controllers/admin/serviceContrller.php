@@ -13,7 +13,7 @@ class serviceContrller extends Controller
 
     function index()
     {
-        $services = service::get();
+        $services = service::orderBy("order" , "ASC")->get();
         return view("admin/services/index", compact("services"));
     }
 
@@ -41,6 +41,7 @@ class serviceContrller extends Controller
             "img" => "required|image",
             "title" => "required|string",
             "dis" => "required|string",
+            "link" => "nullable|string",
         ]);
 
 
@@ -67,6 +68,7 @@ class serviceContrller extends Controller
             "img" => "nullable|image",
             "title" => "required|string",
             "dis" => "required|string",
+            "link" => "nullable|string",
         ]);
 
 
@@ -83,5 +85,19 @@ class serviceContrller extends Controller
     function edit(service $service)
     {
         return view("admin/services/edit", compact("service"));
+    }
+
+
+
+    public function changeOrder(Request $request)
+    {
+
+
+
+        service::where('id', $request->id)->update([
+            'order' => $request->order + 1
+        ]);
+
+        return true;
     }
 }
